@@ -51,7 +51,7 @@
 
 5) EC2 (Dev/Stage/Prod)
     - Create 3 Amazon Linux 2 VM instance and call them (Names: Dev-Env, Stage-Env and Prod-Env)
-    - Instance type: t2.micro
+    - Instance type: t2.medium
     - Security Group (Open): 8080, 9100, 9997 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
     - User data (Copy the following user data): https://github.com/avinashmamidi/realworld-cicd-pipeline-project/blob/45b4334385ca5fc304188863fb80c9f88c2de491/scripts/setup-tomcat-ansible.sh
@@ -59,21 +59,21 @@
 
 6) Prometheus
     - Create an Ubuntu 20.04 VM instance and call it "Prometheus"
-    - Instance type: t2.micro
+    - Instance type: t2.medium
     - Security Group (Open): 9090 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
     - Launch Instance
 
 7) Grafana
     - Create an Ubuntu 20.04 VM instance and call it "Grafana"
-    - Instance type: t2.micro
+    - Instance type: t2.medium
     - Security Group (Open): 3000 and 22 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
     - Launch Instance
 
 8) EC2 (Splunk)
     - Create an Amazon Linux 2 VM instance and call it "Splunk"
-    - Instance type: t2.micro
+    - Instance type: t2.medium
     - Security Group (Open): 22, 8000, 9997, 9100 to 0.0.0.0/0
     - Key pair: Select or create a new keypair
     - Launch Instance
@@ -109,7 +109,7 @@
   - Clone the following repository: https://github.com/avinashmamidi/realworld-cicd-pipeline-project.git
   - Change directory to "realworld-cicd-pipeline-project"
   - Run: cd realworld-cicd-pipeline-project
-  - Run: ./scripts/install-prometheus.sh
+  - Run: ./install-prometheus.sh
   - Confirm the status shows "Active (running)"
   - Exit
 
